@@ -31,7 +31,7 @@ main {max-width: 100vw;}
 
 nav {
 
-width: 100vw;
+max-width: 100vw;
 color: white;
 
 } 
@@ -151,11 +151,15 @@ h3 {
 
 
 
-section.about {position: relative;
-height: 70vh;
+section.about {
+    position: relative;
+max-height: 90vh;
 width: 100%;
+/* min-width: 800px; */
 margin: 0 auto;
 padding: 50px;
+
+/* align-items: top; */
 /* opacity: 0.5; */
 /* background-blend-mode: soft-light; */
 
@@ -167,6 +171,7 @@ section.gallery::after
     
         content: "";
         background: url(./photos/horizontal/backgroundmarmur.jpg);
+        background-size: cover;
         opacity: 0.4;
         top: 0;
         left: 0;
@@ -179,14 +184,21 @@ section.gallery::after
 
 .about-us {
     display: flex;
+    flex-wrap: wrap;
+    min-width: 70vw;
     max-width: 80%;
-    height: 100%;
+    max-height: 90vh;
     padding: 10px 60px;
     /* background-color: cornflowerblue; */
 }
 
-.description {width: 35%;
-height: 100%;
+.description {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 25vw;
+min-height: 50vh;
+
 /* background-color: coral; */
 ;}
 
@@ -199,10 +211,11 @@ margin-bottom: 20px;}
 
 .description p {
     font-size: 1rem;
+
 }
 
 .photo_about {width: 50%;
-    height: 100%;
+    max-height: 90vh;
 }
 
 
@@ -213,11 +226,12 @@ margin-bottom: 20px;}
     grid-auto-flow: dense;
     grid-gap: 1px;
     justify-content: center;
-    height: 100%;
+    height: 50vh;
 }
 
 ul.work li {
     position: relative;
+    overflow: hidden;
 }
 
  ul.work img {
@@ -257,7 +271,7 @@ section.team {
     min-height: 60vh;
     width: 100%;
     text-align: center;
-    margin: 60px 0px;
+    margin-top: 60px;
     padding-top: 40px;
   
 }
@@ -274,16 +288,18 @@ section.team {
 .team-member {
     position: relative;
     width: 20vw;
-    height: 100%;
+    min-height: 80vh;
     padding: 20px;
-border-radius: 50%;
+    margin-right: 10px;
+/* background-color: aqua; */
 }
 
 div.team-img {
     /* display: inline-block; */
     position: relative;
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    min-width: 100px;
+    max-height: 200px;
     overflow: hidden;
     border-radius: 50%;}
 
@@ -300,7 +316,7 @@ div.team-img {
 
 section.gallery {
     position: relative;
-    width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     padding: 10px;
     padding-top: 40px;
@@ -326,12 +342,13 @@ li {
 
 .container ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(70px, auto));
     grid-auto-flow: dense;
     grid-gap: 5px;
     justify-content: center;
+    align-items: stretch;
     margin: 40px;
-    object-fit: cover;
+    /* object-fit: cover; */
     /* background-color: rgb(85, 2, 2);  */
 
 
@@ -375,7 +392,7 @@ li {
 }
 
 .container ul li:nth-child(6) {
-    grid-row: span 6;
+    grid-row: span 5;
     grid-column: span 4;
 }
 
@@ -385,7 +402,7 @@ li {
 }
 
 .container ul li:nth-child(8) {
-    grid-row: span 2;
+    grid-row: span 3;
     grid-column: span 6;
 }
 
